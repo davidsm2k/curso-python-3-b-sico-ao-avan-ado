@@ -15,3 +15,8 @@
 - Design Patterns (Padrões de projeto - GoF) - Programação Orientada a Objetos Avançada
 - Bônus: seções de HTML5 e CSS3
 - Bônus: seção de SQL com MySQL
+
+
+
+Link do curso: https://www.udemy.com/course/python-3-do-zero-ao-avancado/
+
