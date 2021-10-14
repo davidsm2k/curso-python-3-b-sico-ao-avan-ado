@@ -1,0 +1,4 @@
+from programacao_procedural_python_intermediario.aula32_caminho_modulos_pacotes.caminho_modulos_pacotes.pacote2.modulo2 import variavel2
+
+# print(variavel1)
+print(variavel2)

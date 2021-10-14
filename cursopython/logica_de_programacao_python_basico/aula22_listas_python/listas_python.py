@@ -55,7 +55,7 @@ range
 # l1.pop()
 # print(f'Lista 1: {l1}')
 
-# # DEL (Remove o elemento que for informado pelo indice)
+# DEL (Remove o elemento que for informado pelo indice)
 # l1 = [1,2,3,4,5,6,7,8,9]
 # del(l1[3:5])
 # print(f'Lista 1: {l1}')
@@ -85,10 +85,10 @@ range
 #     print(f'{soma} + {valor} = {soma}')
 #
 # print(soma)
-
-l1 = ['String', True, 10, -20.5]
-
-for elem in l1:
-    print(f'O tipo do elem é {type(elem)} e seu valor é {elem}')
+#
+# l1 = ['String', True, 10, -20.5]
+#
+# for elem in l1:
+#     print(f'O tipo do elem é {type(elem)} e seu valor é {elem}')
 
 
