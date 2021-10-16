@@ -35,11 +35,8 @@ def converte_int(cnpj):
     return novo_cnpj
 
 
-def primeiro_digito(cnpj=None):
+def primeiro_digito(cnpj):
     sum_dig = 0
-
-    if cnpj is None:
-        cnpj = []
 
     mult = 5
     for n in range(4):
@@ -55,11 +52,8 @@ def primeiro_digito(cnpj=None):
     return 0 if digito > 9 else digito
 
 
-def segundo_digito(cnpj=None):
+def segundo_digito(cnpj):
     sum_dig = 0
-
-    if cnpj is None:
-        cnpj = []
 
     mult = 6
     for n in range(5):
@@ -74,9 +68,23 @@ def segundo_digito(cnpj=None):
     digito = 11 - (sum_dig % 11)
     return 0 if digito > 9 else digito
 
+def eh_sequencia(cnpj):
+    sequencia = cnpj[0] * len(cnpj)
+
+    if sequencia == cnpj:
+        return True
+    else:
+        return False
 
 def valida_cnpj(cnpj):
     cnpj = removendo_caracteres(cnpj)
+
+    try:
+        if eh_sequencia(cnpj):
+            return False
+    except:
+        return False
+
     cnpj = converte_int(cnpj)
     novo_cnpj = deepcopy(cnpj[:-2])
 
@@ -86,7 +94,7 @@ def valida_cnpj(cnpj):
     novo_cnpj.append(d2)
 
 
-    return "CNPJ VÁLIDO" if int(novo_cnpj == cnpj) else "CNPJ INVÁLIDO"
+    return True if int(novo_cnpj == cnpj) else False
 
 if __name__ == "__main__":
 
@@ -94,4 +102,4 @@ if __name__ == "__main__":
 
     validado = valida_cnpj(cnpj)
 
-    print(validado)
+    print(f'{cnpj} é valido') if validado else print(f'{cnpj} é invalido')
